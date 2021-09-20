@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>No se encontraron imágenes</title>
+</head>
+<body>
+    <p class="msj">
+        This page is being displayed because the url isn't valid
+    </p>
+    <p>
+        <a href="{% url 'global_app:subirArchivo' %}">Click here</a> to upload a picture
+    </p>    
+    <p>
+        <a href="{% url 'global_app:verorgano' obj_id %}">Click here</a> to see the last image
+    </p>    
+</body>
+</html>

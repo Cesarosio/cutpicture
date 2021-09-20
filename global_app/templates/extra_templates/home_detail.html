@@ -1,0 +1,7 @@
+{% extends 'extra_templates/home.html' %}
+{% block obj1 %}
+{% url 'global_app:verorgano' object.id %}
+{% endblock %}
+{% block obj2 %}
+{% url 'global_app:selecciondeorgano' object.id %}
+{% endblock %}

@@ -1,0 +1,24 @@
+Las url a otros archivos que se reemplazan así:
+
+"verorgano.html" -> "{% url 'global_app:verorgano' object.id %}"
+
+
+
+Las url con barras se reemplazan así:
+
+"dropdowrureter/dSpleen.html" -> "{% url 'global_app:dropdowrureter_dSpleen' object.id %}"
+
+Reemplazando el slash "/" for un underscore "_"
+
+
+
+Los archivos de imágenes se reemplazan así:
+
+Imagen completa (ya no debería de haber porque ya los corregí)
+Liver -> {% url 'global_app:liver' object.id %}
+Spleen -> {% url 'global_app:spleen' object.id %}
+Rkidney -> {% url 'global_app:rkidney' object.id %}
+Lkidney -> {% url 'global_app:lkidney' object.id %}
+Rureter -> {% url 'global_app:rureter' object.id %}
+Lureter -> {% url 'global_app:lureter' object.id %}
+Bladder -> {% url 'global_app:bladder' object.id %}

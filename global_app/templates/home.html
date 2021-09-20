@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        a {
+            padding: 3%;
+            border: 1px black solid;
+            display:block;
+            width: 15%;
+            position: absolute;
+            background: #8F3A84;
+        }
+        a:hover{
+            background: #8F3A84;
+            border:none;
+
+        }
+        .see{
+            top: 50%;
+ <p>Parrafo</p>
+        }
+        .select{
+            left: 30%;
+            top: 10%;
+        }
+        .last{
+            top: 50%;
+            left: 30%;
+        }
+    </style>
+</head>
+<body>
+    <a href="{% url 'global_app:subirArchivo' %}" class="upload">Upload a file</a>
+    <a href="{% block obj1 %}{% url 'global_app:verorgano_' %}{% endblock obj1 %}" class="see">Visualize organs</a>
+    <a href="{% block obj2 %}{% url 'global_app:selecciondeorgano_' %}{% endblock obj2 %}" class="select">Select organs</a>
+    <a href="{% url 'global_app:verorgano' last %}" class="last">Last picture</a>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../formato.css">
+  <style>
+    main {
+    width: 100%;
+    height: 100vh;
+    background: url({% url 'global_app:Main' object.id%}) center no-repeat;
+    background-size: contain;
+    position: relative;
+    }
+  </style>
+</head>
+<body>
+
+<main class="main">
+<main class="main"><form action="{% url 'global_app:selecciondeorgano' object.id %}">
+    <button> Select organ </button>
+</form>
+    <div class="container">
+      <span class="view view-1" data-info="view 1"><i class="las la-eye" data-info="liver"></i></span>
+      <span class="view view-2" data-info="view 2"><i class="las la-eye" data-info="spleen"></i></span>
+<span class="view view-3" data-info="view 3"><i class="las la-eye" data-info="rkidney"></i></span>
+<span class="view view-4" data-info="view 4"><i class="las la-eye" data-info="lkidney"></i></span>
+<span class="view view-5" data-info="view 5"><i class="las la-eye" data-info="Lureter"></i></span>
+      <span class="view view-6" data-info="view 6"><i class="las la-eye" data-info="Bladder"></i></span>
+      <span class="view view-7" data-info="view 7"><i class="las la-eye" data-info="Rureter"></i></span>
+    </div>
+  </main>
+
+
+  </div>
+ <div class="overlay">
+
+  <div class="modal">
+    <div class="modal-container">
+      <span class="close">
+        <i class="las la-times"></i>
+      </span>
+      <div class="content" id="content">
+        <p id="description">Lorem ipsum dolor sit.</p>
+      </div>
+    </div>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>
