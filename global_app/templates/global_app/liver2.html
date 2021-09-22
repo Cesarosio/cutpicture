@@ -21,9 +21,10 @@
                     <h1 class="text-secondary" style="padding-left: 15px;">Are you sure you want to export this organ?</h1>
                 </div>
               <img src="{% url 'global_app:A1' object.id %}">
+               
                 <br>
                 
-                       <a href="{% url 'global_app:A1' object.id %}" class="btn btn-secondary text-center align-middle ps-2 pe-2"><i
+                       <a href="{% url 'global_app:A1' object.id %}" download=liver.png class="btn btn-secondary text-center align-middle ps-2 pe-2"><i
                                 class="material-icons align-middle">
                                 done
                             </i>

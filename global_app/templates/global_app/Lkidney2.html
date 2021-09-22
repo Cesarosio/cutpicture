@@ -23,45 +23,32 @@
                 <h5 class="text-secondary">Lkidney</h5>
                 <img src="{% url 'global_app:B2' object.id %}">
                 <br>
-                <div class="row">
-                    <div class="col">
-                        <button class="btn btn-secondary text-center align-middle ps-2 pe-2">
-                            <div class="align-middle">
-                                <i class="material-icons align-middle">
-                                    done
-                                </i>
-                                <span class="text-center align-middle">
-                                    ACCEPT
-                                </span>
-                            </div>
-                        </button>
-                    </div>
-                    <a href="{% url 'global_app:lkidney' object.id %}" class="btn btn-secondary text-center align-middle ps-2 pe-2"><i
+                <br>
+                
+                       <a href="{% url 'global_app:B2' object.id %}" download=lkidney.png class="btn btn-secondary text-center align-middle ps-2 pe-2"><i
                                 class="material-icons align-middle">
                                 done
                             </i>
                             <span class="text-center align-middle">
-                               Cancel
+                                YES
                             </span>
                         </a>
                
                                 </span>
-                            </div>
-                        </button>
+
+                           <a href="{% url 'global_app:lkidney' object.id %}" class="btn btn-secondary text-center align-middle ps-2 pe-2"><i
+                                class="material-icons align-middle">
+                                done
+                            </i>
+                            <span class="text-center align-middle">
+                               cancel
+                            </span>
+                        </a>
+
+ </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <br><br>
-                
-
-
-
-
-            </div>
-        </div>
-    </div>
-
-</body>
-
 </html>
