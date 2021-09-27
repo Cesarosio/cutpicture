@@ -44,39 +44,39 @@ body {
   line-height: 30px;
 }
 
-.view-1 {
-  top: 100px;
-  left: 500px
+.view-1 { 
+   top: 150px;
+  left: 100px;
 }
 
-.view-2 {
-  top: 120px;
-  left: 800px
+.view-2 { 
+  top: 150px;
+  left: 250px;
 }
 
-.view-3 { 
+.view-3 {
   top: 250px;
-  left: 600px
+  left: 120px;
 }
 
-.view-4 {
+.view-4 { 
   top: 250px;
-  left: 800px
+  left: 260px;
 }
 
-.view-5 {
-  top:  300px;
-  left: 720px
-}
-
-.view-6 {
-  top: 520px;
-  left: 650px
-}
-
-.view-7 {
+.view-5 { 
   top: 300px;
-  left: 600px
+  left: 200px;
+}
+
+.view-6 { 
+  top:  300px;
+  left: 110px;
+}
+
+.view-7 { 
+ top: 450px;
+  left: 150px;
 }
 
 .overlay {
