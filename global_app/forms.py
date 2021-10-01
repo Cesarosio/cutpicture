@@ -10,7 +10,7 @@ class ImageForm(forms.ModelForm):
         }
         widgets = {
             'main': forms.FileInput(attrs={
-                'accept':'image/*',
-                'capture':'environment'
+                'accept':'image/*;capture=camera'
+                
             })
         }
