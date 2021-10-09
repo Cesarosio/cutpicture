@@ -21,16 +21,13 @@ C2 = Lureter
 D = Bladder
 """
 from imutils import resize
-from cv2 import imread
 
 
-def read_resize(filename):
+def read_resize(img):
     """
-    Reads a file and resizes the image to
-    a height of 500
+    Resizes an image to a height of 500
     """
     HEIGHT = 500
-    img = imread(filename)
     resized_img = resize(img, height = HEIGHT)
 
     return resized_img

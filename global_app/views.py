@@ -1,15 +1,13 @@
-from os import remove
 from os.path import splitext, split
 
-from datetime import datetime
-from cv2 import imencode
+import numpy as np
+import cv2
 
 from django.shortcuts import redirect, render
 from django.urls import path, reverse_lazy
 from django.http import HttpResponse
 from django.views import View
 from django.views.generic import DetailView
-from django.views.generic.base import TemplateView
 
 from .path_utils import (
     DirProcess,
@@ -30,6 +28,7 @@ from .image_cutter import(
 from .forms import ImageForm
 from .models import Image
 from error_pages.views import get_last
+
 
 def static_response(file_path: str):
     """
@@ -166,7 +165,7 @@ def png_bytes(image):
     """
     Makes a png image from a np.darray using opencv
     """
-    return imencode('.png', image)[1].tobytes()
+    return cv2.imencode('.png', image)[1].tobytes()
 
 
 class ImageCreateView(View):
@@ -205,14 +204,10 @@ class ImageCreateView(View):
 
         # else:
 
-        date = datetime.now().strftime('%y%m%d%H%M%S')
-        temp_filename = f'TF_{date}.{get_extension(str(img))}'
-
-        with open(temp_filename, 'wb') as f:
-            f.write(img.read())
-
-
-        main = read_resize(temp_filename)
+        nparray = np.frombuffer(img.read(), np.uint8)
+        cv2_img = cv2.imdecode(nparray, cv2.IMREAD_COLOR)
+        
+        main = read_resize(cv2_img)
         obj = self.model()
 
         obj.main = png_bytes(main)
@@ -227,7 +222,6 @@ class ImageCreateView(View):
         obj.save()
         self.obj = obj
 
-        remove(temp_filename)
         return redirect(self.success_url())
 
 
@@ -313,6 +307,7 @@ def home(request):
     template_name = 'extra_templates/home.html'
     ctx = {'last':get_last(Image)}
     return render(request, template_name, ctx)
+
 
 class HomeDetail(DetailView):
     model = Image
